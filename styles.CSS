@@ -99,3 +99,45 @@ p {
   font-size: 30px;
   color: #FFEFD5;
  }
+
+
+.container {
+
+    margin: 0 auto;
+}
+
+
+.box {
+    width: 1100px;
+    height: 50px;
+    background-color: darkseagreen;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 20px;
+    position: relative; 
+}
+
+
+.floating-box {
+    float: right; 
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: green;
+}
+
+span:first-child {
+    color: red;
+}

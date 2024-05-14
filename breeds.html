@@ -20,6 +20,30 @@
         color: #C31C15;
     }
 
+    .box {
+        width: 500px;
+        height: 75px;
+        background-color: darkseagreen;
+        border: 1px solid #ccc;
+        margin: 20px;
+        padding: 5px;
+        position: relative; 
+    }
+
+    .box:before {
+        content: "Додатково:";
+        display: block;
+        font-style: italic;
+        color: seagreen;
+    }
+
+    .box:after {
+        content: "Також скоро буде і про котів";
+        display: block;
+        font-style: italic;
+        color: orangered;
+    }
+
 </style>
 
 </head>
@@ -27,6 +51,13 @@
   <h1>Огляд пород тварин</h1>
 
 <p>Ви можете отримати всебічну інформацію про різноманітні породи тварин - від собак і котів до кроликів і інших. Завдяки нашому великому асортименту знань, ви знайдете всю необхідну інформацію для вибору ідеального домашнього улюбленця або додаткових даних для піклування про тих, яких ви вже маєте.</p>
+
+<div class="container">
+    <div class="box floating-box">
+        <a href="https://www.zootovary.com/uk/nairidkisnishi-porodi-sobak-a-956.html" target="_blank">Додаткова інформація про породи собак</a>
+    </div>
+
+</div>
 
 <h2>Найрідкісніші породи</h2>
 
@@ -56,8 +87,10 @@
   <li>Чинук</li>
 </ol>
 
-<a href="https://www.zootovary.com/uk/nairidkisnishi-porodi-sobak-a-956.html" target="_blank">Додаткова інформація про породи собак</a>
-
+<div>
+    <span>Скоро</span>
+    <span>буде нова інформація про породи свійських тварин</span>
+</div>
 
 </body>
 </html>
