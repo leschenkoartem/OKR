@@ -14,8 +14,52 @@
   <h1>Фото</h1>
 </div>
 
+    <button id="redirectButton">Перенаправити</button>
+
+    <button onclick="changeInnerHTML()">Змінити innerHTML</button>
+    <button onclick="changeOuterHTML()">Змінити outerHTML</button>
+    <button onclick="changeNodeValue()">Змінити nodeValue</button>
+    <button onclick="changeTextContent()">Змінити textContent</button>
+
+    <div id="exampleElement">Вітаємо <strong>вас на вкладці з фотографіями тварин</strong>!</div>
+
+    <script>
+
+        var button = document.getElementById("redirectButton");
+
+        button.addEventListener("click", function() {
+
+            location.href = "https://www.example.com";
+        });
+
+        var element = document.getElementById("exampleElement");
+
+        function changeInnerHTML() {
+
+            element.innerHTML = "Раді бачити <em> вас</em>!";
+        }
+
+        function changeOuterHTML() {
+
+            element.outerHTML = "<p>Сподіваємося, що фото наших тварин вам сподобаються!</p>";
+        }
+
+        function changeNodeValue() {
+
+            var textNode = element.firstChild; 
+            textNode.nodeValue = "Зустрічаємо ";
+        }
+
+        function changeTextContent() {
+
+            element.textContent = "Можете також поділитися фото з вашими улюбленцями!";
+        }
+
+    </script>
+
+
 <a href="https://img.freepik.com/free-photo/close-up-portrait-on-beautiful-cat_23-2149214414.jpg" target="_blank">
-  <img src="https://img.freepik.com/free-photo/close-up-portrait-on-beautiful-cat_23-2149214414.jpg" alt="Кіт" width="50%" height="50%" style="display: block; margin: auto;" />
+  <img src="https://img.freepik.com/free-photo/close-up-portrait-on-beautiful-cat_23-2149214414.jpg" alt="Кіт" width="50%" height="50%" style="display: block; margin: auto; margin-top: 20px;" />
 </a>
 
 

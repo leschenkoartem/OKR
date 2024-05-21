@@ -21,6 +21,64 @@
 <body>
   <h1>Тварини</h1>
 
+    <button class="redirectButton">Перенаправлення 1</button>
+    <button class="redirectButton">Перенаправлення 2</button>
+    <button class="redirectButton">Перенаправлення 3</button>
+
+    <button onclick="prependTextNode()">Додати текст спереду</button>
+    <button onclick="appendTextNode()">Додати текст ззаду</button>
+    <button onclick="replaceElement()">Замінити елемент</button>
+    <button onclick="removeElement()">Видалити елемент</button>
+
+
+    <div id="targetElement">
+        <!-- Поточний вміст елемента, який буде замінений -->
+        <p>Поточний текст</p>
+    </div>
+
+    <script>
+
+        var buttons = document.querySelectorAll(".redirectButton");
+
+
+        buttons.forEach(function(button) {
+            button.addEventListener("click", function() {
+
+                setTimeout(function() {
+                    location.href = "https://www.example.com"; 
+                }, 3000);
+            });
+        });
+
+
+        function prependTextNode() {
+            var targetElement = document.getElementById("targetElement");
+            var newText = document.createTextNode("Текст спереду ");
+
+            targetElement.prepend(newText);
+        }
+
+        function appendTextNode() {
+            var targetElement = document.getElementById("targetElement");
+            var newText = document.createTextNode(" Текст ззаду");
+
+            targetElement.append(newText);
+        }
+
+        function replaceElement() {
+            var targetElement = document.getElementById("targetElement");
+
+            targetElement.replaceWith(document.createTextNode("Елемент був замінений"));
+        }
+
+        function removeElement() {
+            var targetElement = document.getElementById("targetElement");
+
+            targetElement.remove();
+        }
+
+    </script>
+
 <p>На нашому сайті ви знайдете захоплюючу та корисну інформацію про різноманітний світ тварин. Незалежно від того, чи цікавлять вас домашні улюбленці, дикі тварини, чи загальні знання про тварин, ми пропонуємо щось для кожного.</p>
 
 <h2>Найпопуляйніші домашні тварини</h2>

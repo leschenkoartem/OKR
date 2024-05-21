@@ -35,6 +35,58 @@
     }
 
   </style>
+
+<script>
+
+    function showAlert() {
+      alert("На честь Дня захисту тварин оголошуємо конкурс на найкраще фото вашого домашнього улюбленця. Надсилайте нам фото на пошту svit@ukr.net, і отримайте можливість виграти приз!");
+    }
+
+    function showPrompt() {
+      var name = prompt("Будь ласка, введіть ваше ім'я:");
+      if (name != null && name != "") {
+        alert("Привіт, " + name + "! Ласкаво просимо до нашого сайту про тварин!");
+      }
+    }
+
+    function showConfirm() {
+      var result = confirm("Ви були в Київському зоопарку?");
+      if (result == true) {
+        alert("Будемо раді, якщо поділитесь своїми враженнями!");
+      } else {
+        alert("Обов'язково відвідайте! Це чудове місце.");
+      }
+    }
+
+    function showDeveloperInfo(lastName, firstName, position = "веб-розробник") {
+    alert("Ім'я: " + firstName + "\nПрізвище: " + lastName + "\nПосада: " + position);
+    }
+
+    function compareStrings() {
+      var str1 = document.getElementById("string1").value;
+      var str2 = document.getElementById("string2").value;
+
+      if (str1.length > str2.length) {
+          alert("Перший рядок довший: " + str1);
+      } else if (str2.length > str1.length) {
+          alert("Другий рядок довший: " + str2);
+      } else {
+          alert("Рядки мають однакову довжину.");
+      }
+     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+
+            document.body.style.backgroundColor = "teal";
+
+            setTimeout(function() {
+                document.body.style.backgroundColor = "";
+            }, 30000); 
+        });
+
+
+  </script>
+
 </head>
 <body>
   <h1>Вітаємо у Світі тварин!</h1>
@@ -70,7 +122,22 @@
 
   <p>Сподіваємось, що ви зможете знайти щось цікаве про тварин для себе</p>
 
-<a href="https://hi-news.ru/wp-content/uploads/2023/09/home_pets_2-750x450.jpg" target="_blank">
+  <script src="dialog.js"></script>
+
+  <button onclick="showAlert()">Конкурс</button>
+  <button onclick="showPrompt()">Як вас звати?</button>
+  <button onclick="showConfirm()">Опитування</button>
+  <button onclick="dialogWithUser()">Розпочати діалог</button>
+  <button onclick="showDeveloperInfo('Лещенко', 'Артем', 'Frontend розробник')">Інформація про розробника</button>
+  <button onclick="compareStrings()">Порівняти рядки</button>
+
+    <p><label for="string1">Перший рядок:</label></p>
+    <input type="text" id="string1"><br><br>
+
+    <p><label for="string2">Другий рядок:</label></p>
+    <input type="text" id="string2"><br><br>
+
+<a href="https://canapeclub.ru/image/catalog/blog/kuhni_mira/kuhni_mira_preview.jpg" target="_blank" style="display: block; margin-top: 0px;">
   <img src="https://hi-news.ru/wp-content/uploads/2023/09/home_pets_2-750x450.jpg" alt="Тварини" width="75%" height="75%" style="display: block; margin: auto;" />
 </a>
 
@@ -98,4 +165,3 @@
 
 </body>
 </html>
-
